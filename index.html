@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <meta name="description" content="GFix 热修复平台">
+  <meta name="author" content="guohengxi.dennis@gmail.com">
+  <link rel="icon" href="./favicon.ico">
+
+  <title>GFix 热修复平台</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link href="libs/jquery-toast/jquery.toast.min.css" rel="stylesheet">
+  <link href="app.css" rel="stylesheet">
+</head>
+
+<body way-scope="app">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+            <span class="sr-only">切换菜单</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#" title="GFix 热修复平台">GFix</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav" id="nav-bar">
+          <li><a href="#/">首页</a></li>
+          <li><a href="#/sdk">SDK下载</a></li>
+          <li><a href="#/doc">文档</a></li>
+          <li><a href="#/copy">合作</a></li>
+        </ul>
+
+        <div class="navbar-form navbar-right" id="loginForm">
+          <form class="form" way-data="user">
+            <div class="form-group">
+              <input name="username" type="text" placeholder="用户名" class="form-control">
+            </div>
+            <div class="form-group">
+              <input name="password" type="password" placeholder="密码" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success" id="login">登录</button>
+            <span class="btn btn-info" id="registe" data-toggle="modal" data-target="#registModal">注册</span>
+          </form>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right dp-n" id="userNav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+
+              <span class="glyphicon glyphicon-user"></span> <b id="user">用户</b> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="javascript:;" id="console"><span class="glyphicon glyphicon-dashboard"></span> 控制台</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="javascript:;" id="logout"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li>
+            </ul>
+          </li>
+        </div>
+
+      </div>
+      <!--/.navbar-collapse -->
+    </div>
+  </nav>
+
+  <div id="content">
+
+  </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="registModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">平台注册</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">邮箱</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="邮箱" required>
+            </div>
+            <div class="form-group">
+              <label for="password">密码</label>
+              <input type="password" class="form-control" id="password" placeholder="密码" required>
+            </div>
+            <div class="form-group">
+              <label for="passwordConfirm">密码确认</label>
+              <input type="password" class="form-control" id="passwordConfirm" placeholder="密码确认" required>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary">确定</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="libs/way.min.js"></script>
+  <script src="libs/sammy.min.js"></script>
+  <script src="libs/jquery-toast/jquery.toast.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
